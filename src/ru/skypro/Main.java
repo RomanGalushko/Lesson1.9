@@ -27,12 +27,15 @@ public class Main {
 
 
         System.out.println("Сравнение для Book: \n");
-        Book tomDeMarcoBook = new Book("Deadline", new Author("Tom", "DeMarco"), 1997);
+        Book tomDeMarcoBook = new Book("Deadline", tomDeMarco, 1997);
+        Book tomDeMarcoBook2 = new Book("Deadline", tomDeMarco2, 1997);
         Book levTolstoyBook = new Book("Война и мир", new Author("Лев", "Тольстой"), 1865);
         Book levTolstoyBook2 = new Book("Война и мир", new Author("Лев", "Тольстой"), 1869);
         System.out.println("Book copies equals: " + tomDeMarcoBook.equals(levTolstoyBook));
+        System.out.println("Book copies equals: " + tomDeMarcoBook.equals(tomDeMarcoBook2));
         System.out.println("Book copies equals: " + tomDeMarcoBook.equals(levTolstoyBook2));
         System.out.println("Book copies equals by hashCode: " + (levTolstoyBook.hashCode() == levTolstoyBook2.hashCode()));
+        System.out.println("Book copies equals by hashCode: " + (tomDeMarcoBook.hashCode() == tomDeMarcoBook2.hashCode()));
 
     }
 }
